@@ -27,6 +27,7 @@ class Flooder:
 		
 
 	def comment(self,qty):
+		#not working properly
 		while self.counting < qty:
 			try:
 				time.sleep(1)
