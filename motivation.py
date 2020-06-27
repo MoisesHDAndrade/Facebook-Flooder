@@ -87,4 +87,4 @@ def emoji():
 	return em
  
 t = motivation()
-print(f'"{random.choice(motivation())}" Bot motivacional {random.choice(emoji())}')
+#print(f'"{random.choice(motivation())}" Bot motivacional {random.choice(emoji())}')
