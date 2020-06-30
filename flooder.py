@@ -4,7 +4,7 @@ from selenium.webdriver.chrome.options import Options
 import time
 import random
 from motivation import motivation, emoji
-from secret import email, password
+from secret import email, password, post
 
 class Flooder:
 	def __init__(self, url):
@@ -70,6 +70,6 @@ class Flooder:
 					contador += 1	
 			
 
-app = Flooder('https://www.facebook.com/lawliex/posts/3207304705994885')
+app = Flooder(post())
 app.login()
 app.flood(10)
