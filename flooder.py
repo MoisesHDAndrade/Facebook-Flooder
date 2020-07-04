@@ -44,12 +44,12 @@ class Flooder:
 				text_box.click()
 				time.sleep(1)
 				if 'chrome' in str(self.driver):
-					text_box.send_keys(f'"{random.choice(motivation())}" Bot motivacional')
+					text_box.send_keys(f'"{random.choice(motivation())}" :|] [Bot motivacional] {random.choice(emoji())}')
 					text_box.send_keys(Keys.ENTER)
 					time.sleep(1)
 					contador += 1
 				else:
-					text_box.send_keys(f'"{random.choice(motivation())}" Bot motivacional {random.choice(emoji())}')
+					text_box.send_keys(f'"{random.choice(motivation())}" :|] [Bot motivacional] {random.choice(emoji())}')
 					text_box.send_keys(Keys.ENTER)
 					time.sleep(1)
 					contador += 1	
@@ -59,12 +59,12 @@ class Flooder:
 				text_box.click()
 				
 				if 'chrome' in str(self.driver):
-					text_box.send_keys(f'"{random.choice(motivation())}" Bot motivacional')
+					text_box.send_keys(f'"{random.choice(motivation())}" :|] [Bot motivacional] {random.choice(emoji())}')
 					text_box.send_keys(Keys.ENTER)
 					time.sleep(1)
 					contador += 1
 				else:
-					text_box.send_keys(f'"{random.choice(motivation())}" Bot motivacional {random.choice(emoji())}')
+					text_box.send_keys(f'"{random.choice(motivation())}" :|] [Bot motivacional] {random.choice(emoji())}')
 					text_box.send_keys(Keys.ENTER)
 					time.sleep(1)
 					contador += 1	
@@ -72,4 +72,4 @@ class Flooder:
 
 app = Flooder(post())
 app.login()
-app.flood(10)
+app.flood(250000)
