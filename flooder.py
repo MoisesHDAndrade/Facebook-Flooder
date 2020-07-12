@@ -3,7 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options  
 import time
 import random
-from motivation import motivation, emoji
+from motivation import motivation, emoji, curiosity
 from secret import email, password, post
 
 class Flooder:
@@ -68,8 +68,42 @@ class Flooder:
 					text_box.send_keys(Keys.ENTER)
 					time.sleep(1)
 					contador += 1	
-			
+	
+	def flood_curiosity(self, qty):
+		contador = 0
+		while contador <= qty:
+			time.sleep(1)
+			try:
+				coment_button = self.driver.find_element_by_xpath("//*[contains(text(),'Comentar')]").click()
+				text_box = self.driver.find_element_by_class_name('_1mj')
+				text_box.click()
+				time.sleep(1)
+				if 'chrome' in str(self.driver):
+					text_box.send_keys(f'"{random.choice(curiosity())}" :|] [Bot Sapiente] {random.choice(emoji())}')
+					text_box.send_keys(Keys.ENTER)
+					time.sleep(1)
+					contador += 1
+				else:
+					text_box.send_keys(f'"{random.choice(curiosity())}" :|] [Bot Sapiente] {random.choice(emoji())}')
+					text_box.send_keys(Keys.ENTER)
+					time.sleep(1)
+					contador += 1	
+			except:
+				time.sleep(1)
+				text_box = self.driver.find_element_by_class_name('_1mj')
+				text_box.click()
+				
+				if 'chrome' in str(self.driver):
+					text_box.send_keys(f'"{random.choice(curiosity())}" :|] [Bot Sapiente] {random.choice(emoji())}')
+					text_box.send_keys(Keys.ENTER)
+					time.sleep(1)
+					contador += 1
+				else:
+					text_box.send_keys(f'"{random.choice(curiosity())}" :|] [Bot Sapiente] {random.choice(emoji())}')
+					text_box.send_keys(Keys.ENTER)
+					time.sleep(1)
+					contador += 1			
 
 app = Flooder(post())
 app.login()
-app.flood(250000)
+app.flood_curiosity(250000)
